@@ -7,23 +7,9 @@
 - GitHub Pages: https://inpangpang.github.io/yipang-lo-portfolio/
 - ChatGPT Sites: https://yipang-lo-flight-nursing.winfly1017.chatgpt.site
 
-## Structure
+## Repository
 
-- `app/`: React / vinext source used by ChatGPT Sites
-- `docs/`: static GitHub Pages build
-- `scripts/export-static.mjs`: rebuilds the static page after `npm run build`
-- `.github/workflows/pages.yml`: GitHub Pages deployment workflow
+- `docs/`: GitHub Pages 靜態網站（HTML、CSS、JavaScript 與圖片）
+- `.github/workflows/pages.yml`: GitHub Pages 自動部署流程
 
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-## Rebuild GitHub Pages
-
-```bash
-npm run build
-node scripts/export-static.mjs
-```
+每次更新 `main` 分支後，GitHub Actions 會重新部署網站。
