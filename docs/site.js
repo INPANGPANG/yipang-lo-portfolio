@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const portraitStyles = document.createElement("style");
+  portraitStyles.textContent = `
+    @media (width > 850px) {
+      .portrait {
+        align-self: center;
+        justify-self: center;
+        width: min(430px, 78%);
+        margin: 100px 4vw 55px 2vw;
+      }
+      .portrait img { height: 500px; }
+    }
+    @media (width <= 850px) {
+      .portrait {
+        width: min(420px, 78vw);
+        margin: 30px auto 80px;
+      }
+      .portrait img { height: 480px; }
+    }
+    @media (width <= 520px) {
+      .portrait { width: 76vw; }
+      .portrait img { height: 390px; }
+    }
+  `;
+  document.head.append(portraitStyles);
+
   const rows = [...document.querySelectorAll(".atlas-row")];
   const query = document.querySelector(".atlas-search input");
   const selects = [...document.querySelectorAll(".atlas-controls select")];
